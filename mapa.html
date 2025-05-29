@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mapa dos Sonhos</title>
+    <link rel="stylesheet" href="./styles/stylemapa.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  </head>
+
+  <body>
+    <h1 class="title">Mapa de sonhos</h1>
+
+    <div id="map"></div>
+
+    <nav>
+      <a href="quiz.html" class="button">Próximo</a>
+      <a href="index.html" class="button">Início</a>
+    </nav>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+      var map = L.map("map").setView([20, 0], 2);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors",
+      }).addTo(map);
+
+      function addDestino(lat, lng, titulo, descricao, imagem) {
+        var popupContent =
+          "<strong>" +
+          titulo +
+          "</strong><br>" +
+          descricao +
+          "<br>" +
+          '<img src="' +
+          imagem +
+          '" class="popup-img">';
+        L.marker([lat, lng]).addTo(map).bindPopup(popupContent);
+      }
+
+      addDestino(
+        28.417665, 
+        -81.581238, 
+        "Disney World, EUA", 
+        "Bom, eu te perguntei quais lugares você iria comigo. Me disse parque de diversões, então vou me iludir e imaginar nossos filhos na Disney. Eu ficaria bobo, nós segurando a mão dos nossos filhos enquanto assistimos ao show de fogos de artifício à noite. Quem nunca imaginou isso, é no mínimo maluco.", 
+        "assets/images/disney.jpg");
+
+      addDestino(
+        41.9029, 
+        12.4538, 
+        "Vaticano, Itália", 
+        "Capital católica do mundo, podemos visitar a Basílica de São Pedro, a Capela Sistina e o Museu do Vaticano. Admirar a arquitetura renascentista, contemplar as obras de Michelangelo e celebrar a fé no coração da Igreja Católica, sentindo toda a espiritualidade e história que esse destino transmite.",
+        "assets/images/vaticano.jpg"
+      );
+
+      addDestino(
+        -5.827,
+        -35.212,
+        "Arena das Dunas, Brasil",
+        "É muito lindo quando você vê esse estádio, e me manda foto, e sempre me diz 'qnd tá roxo é muito bonito'. E mesmo sabendo que você tá perto e pode ir lá, eu quero ir contigo e te levar lá (ou você me levar).",
+        "assets/images/arena.jpg"
+      );
+
+      addDestino(
+        -23.5456,
+        -46.475,
+        "Neo Química Arena, Brasil",
+        "O que falar desse? Seu sonho né, seu time, a torcida que você ama, você sempre me fala dele, o quanto quer visitar. A partir do que você fala, meu sonho é estar lá com você e ver sua felicidade.",
+        "assets/images/neo.jpg"
+      );
+
+      addDestino(
+        38.88824, 
+        -77.01987, 
+        "Museu Nacional do Ar e Espaço, EUA", 
+        "Esse lugar também fala por si só. Você ama aviões, ama o espaço, ama tudo que envolve o céu, a liberdade e a imensidão. Eu te vejo lá, igual uma criança alegre e com brilhos nos olhos, admirando cada aeronave, cada foguete, cada detalhe.", 
+        "assets/images/museuaviao.jpg");
+
+      addDestino(
+        53.5524, 
+        9.9958, 
+        "Porto de Hamburgo, Alemanha", 
+        "Papo reto, o quanto esse porto é lindo? Po, fiquei apaixonado. E pensando em lugares que eu te levaria e gostaria de estar, esse é um deles, tanto quanto você ama avião, você ama navios, acho que eu nunca mais vou ver esses dois transportes e não lembrar de você. Tá eternizado, e esse porto ta na lista.",
+        "assets/images/porto.jpg");
+
+      addDestino(
+        -33.9278,
+        18.4078,  
+        "Cidade do Cabo, África do Sul", 
+        "Não sei, um lugar na África pra mim faz todo sentido. Continente foda, que deve ter muitos lugares bonitos, e eu sou curioso demais pra conhecer. A cidade do cabo é absurdo de bonito, parece um lugar lindo pra dar um passeio e relaxar a mente.",
+        "assets/images/cidadecabo.jpg");
+
+      addDestino(
+        -8.5050, 
+        -35.0020, 
+        "Porto de Galinhas, Brasil", 
+        "",
+        "assets/images/portodegalinhas.jpg");
+
+      addDestino(
+        -3.8547, 
+        30.4437, 
+        "", 
+        "",
+        "assets/images/praia.jpg");
+    </script>
+  </body>
+</html>

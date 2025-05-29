@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nossa Linha do Tempo</title>
+    <link rel="stylesheet" href="./styles/stylelinha.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function abrirModal(src) {
+        var modal = document.getElementById("modal");
+        var imagemModal = document.getElementById("imagemModal");
+        modal.style.display = "block";
+        imagemModal.src = src;
+      }
+
+      function fecharModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">Nossa Linha do Tempo</h1>
+
+    <div class="timeline">
+      <div class="timeline-event">
+        <div class="circle">
+          <img src="assets/images/natal.png" alt="Descrição" />
+        </div>
+
+        <div class="line"></div>
+        <p>
+          <strong>Natal - 2022</strong><br />24 de dezembro de 2022 foi quando
+          te conheci, e essa data está registrada para sempre no livro da minha
+          história. A única explicação é que o Papai Noel quis me dar um
+          presente… ou me trouxe um verdadeiro milagre de Natal. Por isso, essa
+          é a data que eu mais amo. Lembro até hoje de você me oferecendo mousse
+          de maracujá — e quando falou que era do Nordeste, aquilo só me deixou
+          ainda mais feliz. E sei que, da melhor forma, o dia em que estivermos
+          juntos no Natal, e eu puder comer o mousse de maracujá que você faz,
+          vai ser… o melhor dia da minha vida.
+        </p>
+      </div>
+
+      <div class="print">
+        <img
+          src="assets/images/natal.jpg"
+          alt="Print da nossa primeira conversa"
+          onclick="abrirModal(this.src)"
+        />
+      </div>
+
+      <div class="timeline-event">
+        <div class="circle">
+          <img src="assets/images/corda.png" alt="Descrição" />
+        </div>
+        <div class="line"></div>
+        <p>
+          <strong>2023-2024</strong><br />Acho que a gente estava numa
+          proximidade muito alta, conversando todos os dias, zoando, nos
+          conhecendo e falando besteiras até de madrugada. E, nesse período, eu
+          vi você conquistar seu emprego no aeroporto. Fiquei feliz pra caralho
+          naquele dia! Por mais que, no final de 2023, a gente tenha se afastado
+          um pouco, eu sabia que a nossa relação era como uma corda: se
+          cortasse, ia ter nós e nós para reconstruir tudo o que temos.
+        </p>
+      </div>
+
+      <div class="print">
+        <img
+          src="assets/images/trabalho.jpg"
+          alt="Print da nossa primeira conversa"
+          onclick="abrirModal(this.src)"
+        />
+      </div>
+
+      <div class="timeline-event">
+        <div class="circle">
+          <img src="assets/images/mulheres.png" alt="Descrição" />
+        </div>
+        <div class="line"></div>
+        <p>
+          <strong>Março - 2025</strong><br />Esse mês foi intenso demais pra
+          mim. No Dia das Mulheres, eu estava tomado pela vontade de expressar
+          tudo que sentia — até fui meio bobo de não ter me planejado melhor
+          para o presente, mas no fim deu tudo certo. A felicidade que senti
+          naquele dia foi absurda… A reciprocidade, o carinho e o amor que
+          recebi me contagiaram completamente. Não existe nada melhor do que
+          poder demonstrar esse afeto pelas duas mulheres que são, sem dúvida,
+          meu porto seguro.
+        </p>
+      </div>
+
+      <div class="print">
+        <img
+          src="assets/images/mulheres.jpg"
+          alt="Print da nossa primeira conversa"
+          onclick="abrirModal(this.src)"
+        />
+      </div>
+
+      <div class="timeline-event">
+        <div class="circle">
+          <img src="assets/images/aniversario.png" alt="Descrição" />
+        </div>
+        <div class="line"></div>
+        <p>
+          <strong>04 de Junho de 2025</strong><br />Hoje eu quis usar o
+          pouquinho que eu sei… pra te surpreender. Talvez aniversário não seja
+          só sobre o presente físico, mas sobre formas diferentes de demonstrar
+          o quanto a pessoa é especial e importante, hoje e sempre. E eu espero,
+          de verdade, que você tenha gostado do presente que preparei com tanto
+          carinho — e que tenha sido algo bom pra você.
+        </p>
+      </div>
+
+      <div class="print">
+        <img
+          src="assets/images/futuro.jpg"
+          alt="Print da nossa primeira conversa"
+          onclick="abrirModal(this.src)"
+        />
+      </div>
+
+      <div class="timeline-event">
+        <div class="circle">
+          <img
+            src="assets/images/aviao.png"
+            alt="Descrição"
+            onclick="abrirModal(this.src)"
+          />
+        </div>
+        <div class="line"></div>
+        <p>
+          <strong>Futuro</strong><br />Se tudo der certo, quero que estejamos
+          juntos sempre, mesmo que como amigos. E se o destino permitir que a
+          gente possa realizar sonhos, ter a Angelina e o Leonardo/Alison, de
+          uma casa na praia e viajar pelo mundo. Quero que nossas viagens pelo
+          mundo sejam lembranças incríveis: conhecer novos lugares, experimentar
+          comidas estranhas, aprender linguas, se perder e se achar… sempre de
+          mãos dadas. Que cada pôr do sol, cada mapa e cada destino tenha você
+          ao meu lado.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <img class="modal-conteudo" id="imagemModal" />
+    </div>
+
+    <nav>
+      <a href="mapa.html" class="button">Próximo</a>
+      <a href="index.html" class="button">Início</a>
+    </nav>
+  </body>
+</html>

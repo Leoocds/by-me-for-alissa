@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./styles/stylequiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      let currentQuestion = 1;
+
+      function checkAnswer(button, correctness) {
+        if (correctness === "correto") {
+          button.style.backgroundColor = "green";
+        } else {
+          button.style.backgroundColor = "red";
+        }
+        setTimeout(() => {
+          document.getElementById("question" + currentQuestion).style.display =
+            "none";
+          currentQuestion++;
+          const nextQuestion = document.getElementById(
+            "question" + currentQuestion
+          );
+          if (nextQuestion) {
+            nextQuestion.style.display = "block";
+          } else {
+            document.getElementById("result").style.display = "block";
+            document.querySelector("form.quiz-container").style.display =
+              "block";
+          }
+        }, 500);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">Quiz</h1>
+
+    <div class="quiz-container">
+      <div class="question" id="question1">
+        <p>1. Qual a data que a gente se conheceu?</p>
+        <button onclick="checkAnswer(this, 'errado')">
+          25 de dezembro de 2022
+        </button>
+        <button onclick="checkAnswer(this, 'correto')">
+          24 de dezembro de 2022
+        </button>
+        <button onclick="checkAnswer(this, 'errado')">
+          24 de dezembro de 2023
+        </button>
+      </div>
+
+      <div class="question" id="question2" style="display: none">
+        <p>2. Se eu fosse te levar pra algum lugar/evento qual seria?</p>
+        <button onclick="checkAnswer(this, 'correto')">Arena das Dunas</button>
+        <button onclick="checkAnswer(this, 'correto')">
+          Neo Química Arena + algum jogo
+        </button>
+        <button onclick="checkAnswer(this, 'correto')">Show do Grafith</button>
+      </div>
+
+      <div class="question" id="question3" style="display: none">
+        <p>3. Qual sobremesa você me ofereceu quando nos conhecemos?</p>
+        <button onclick="checkAnswer(this, 'errado')">Pudim</button>
+        <button onclick="checkAnswer(this, 'errado')">Bolo de cenoura</button>
+        <button onclick="checkAnswer(this, 'correto')">
+          Mousse de maracujá
+        </button>
+      </div>
+
+      <div class="question" id="question4" style="display: none">
+        <p>4. Qual meu signo?</p>
+        <button onclick="checkAnswer(this, 'correto')">Peixes</button>
+        <button onclick="checkAnswer(this, 'errado')">Aquário</button>
+        <button onclick="checkAnswer(this, 'errado')">Áries</button>
+      </div>
+
+      <div class="question" id="question5" style="display: none">
+        <p>5. Qual o atual maior avião do mundo?</p>
+        <button onclick="checkAnswer(this, 'correto')">Airbus A380</button>
+        <button onclick="checkAnswer(this, 'errado')">Antonov AN-225</button>
+        <button onclick="checkAnswer(this, 'errado')">Airbus Beluga</button>
+      </div>
+
+      <div class="question" id="question6" style="display: none">
+        <p>6. Qual a função dos flaps nas asas dos aviões??</p>
+        <button onclick="checkAnswer(this, 'errado')">
+          Melhorar o conforto dos passageiros
+        </button>
+        <button onclick="checkAnswer(this, 'errado')">
+          Diminuir o consumo de combustível
+        </button>
+        <button onclick="checkAnswer(this, 'correto')">
+          Aumentar sustentação e reduzir velocidade em pousos e decolagens
+        </button>
+      </div>
+
+      <div class="question" id="question7" style="display: none">
+        <p>7. Quem fez o gol no mundial do Corinthians?</p>
+        <button onclick="checkAnswer(this, 'errado')">William</button>
+        <button onclick="checkAnswer(this, 'correto')">Paolo Guerreiro</button>
+        <button onclick="checkAnswer(this, 'errado')">Ralf</button>
+      </div>
+
+      <div class="question" id="question8" style="display: none">
+        <p>
+          8. Administrar a própria vida é mais difícil que administrar uma
+          empresa?
+        </p>
+        <button onclick="checkAnswer(this, 'correto')">Sim</button>
+        <button onclick="checkAnswer(this, 'correto')">Não</button>
+        <button onclick="checkAnswer(this, 'correto')">Depende</button>
+        <button onclick="checkAnswer(this, 'correto')">Não sei</button>
+      </div>
+
+      <div class="result" id="result" style="display: none">
+        <h2>Parabéns! Você concluiu o quiz!</h2>
+        <p id="score"></p>
+        <p>Agora escreva suas respostas pessoais abaixo! ❤️</p>
+      </div>
+
+      <form
+        class="quiz-container"
+        action="https://formspree.io/f/xovdgkev"
+        method="POST"
+      >
+        <div class="question">
+          <p>
+            1. Você gosta mais da ideia de uma viagem longa ou curta de avião?
+            Por quê??
+          </p>
+          <input
+            type="text"
+            name="aviao"
+            placeholder="Sua resposta..."
+            required
+          />
+        </div>
+
+        <div class="question">
+          <p>
+            2. Se um dia a gente for juntos a um jogo do Corinthians, como você
+            imagina que seria?
+          </p>
+          <input
+            type="text"
+            name="lugar_evento"
+            placeholder="Sua resposta..."
+            required
+          />
+        </div>
+
+        <div class="question">
+          <p>
+            3. Qual característica minha você acha que tem a ver com o meu
+            signo?
+          </p>
+          <input
+            type="text"
+            name="signo"
+            placeholder="Sua resposta..."
+            required
+          />
+        </div>
+
+        <div class="question">
+          <p>
+            4. O que você acha que seria mais divertido e mais difícil na nossa
+            rotina como pais?
+          </p>
+          <input
+            type="text"
+            name="pais"
+            placeholder="Sua resposta..."
+            required
+          />
+        </div>
+
+        <div class="question">
+          <p>
+            Espaço aberto se quiser escrever qualquer coisa, se declarar, me
+            xingar, e etc.
+          </p>
+          <textarea
+            name="declaracao"
+            placeholder="Escreva aqui"
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Enviar Respostas</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
