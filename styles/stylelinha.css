@@ -1,5 +1,5 @@
 body {
-  background: #fff0f5;
+  background-image: linear-gradient(to bottom, #9d78f3, #6a19a0);
   color: #333;
   text-align: center;
   padding: 20px;
@@ -9,7 +9,7 @@ h1 {
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   margin-bottom: 50px;
-  color: #ff69b4;
+  color: #ffffff;
 }
 
 .timeline {
@@ -20,7 +20,7 @@ h1 {
   position: relative;
   margin: 50px auto;
   max-width: 100%;
-  border-top: 4px solid #ff69b4;
+  border-top: 4px solid #ffffff;
   padding-top: 20px;
 }
 
@@ -68,7 +68,7 @@ h1 {
 .circle {
   width: 60px;
   height: 60px;
-  background: #ff69b4;
+  background: #ffffff;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -90,12 +90,12 @@ h1 {
 .line {
   width: 2px;
   height: 50px;
-  background: #ff69b4;
+  background: #ffffff;
   margin: 5px 0;
 }
 
 .timeline-event p {
-  background: #ffe4ec;
+  background: #fff;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -124,8 +124,8 @@ h1 {
   font-family: "Dancing Script", cursive;
   margin: 10px;
   padding: 10px 20px;
-  background: #ff69b4;
-  color: white;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s ease;

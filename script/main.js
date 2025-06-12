@@ -1,3 +1,4 @@
+
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -103,7 +104,7 @@ const animationTimeline = () => {
     .from(".idea-1", 0.7, ideaTextTrans)
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=1.5")
     .from(".idea-2", 0.7, ideaTextTrans)
-    .to(".idea-2", 0.7, ideaTextTransLeave, "+=1.5")
+    .to(".idea-2", 0.7, ideaTextTransLeave, "+=5")
     .from(".idea-3", 0.7, ideaTextTrans)
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
@@ -304,3 +305,4 @@ const resolveFetch = () => {
 };
 
 resolveFetch().then(animationTimeline());
+fetchData();
